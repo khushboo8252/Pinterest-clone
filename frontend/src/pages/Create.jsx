@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { FaPlus } from "react-icons/fa";
-import { usePinData } from "../context/PinContext";
+import { PinData } from "../context/PinContext";
 import { useNavigate } from "react-router-dom";
 
 const Create = () => {
@@ -14,7 +14,7 @@ const Create = () => {
   const [filePrev, setFilePrev] = useState("");
   const [title, setTitle] = useState("");
   const [pin, setPin] = useState("");
-  const { addPin } = usePinData();
+  const { addPin } = PinData();
 
   const changeFileHandler = (e) => {
     const file = e.target.files[0];
