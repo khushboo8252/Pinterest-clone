@@ -1,14 +1,14 @@
 import {BrowserRouter , Routes, Route} from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Home from './pages/Home.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
 import { UserData } from './context/UserContext.jsx';
-import { Loading } from './components/Loading';
-import Navbar from './components/Navbar';
-import Pinpage from './pages/Pinpage';
-import Create from './pages/Create';
-import Account from './pages/Account';
-import UserProfile from './pages/UserProfile';
+import { Loading } from './components/Loading.jsx';
+import Navbar from './components/Navbar.jsx';
+import Pinpage from './pages/PinPage.jsx';
+import Create from './pages/Create.jsx';
+import Account from './pages/Account.jsx';
+import UserProfile from './pages/UserProfile.jsx';
 
 const App = () => {
   const {loading,isAuth,user} = UserData();

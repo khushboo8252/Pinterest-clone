@@ -68,7 +68,7 @@ const PinPage = ({ user }) => {
                   <img
                     src={pin.image.url}
                     alt=""
-                    className="object-cover w-full rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                    className="object-cover w-80 rounded-t-lg md:rounded-l-lg md:rounded-t-none"
                   />
                 )}
               </div>
