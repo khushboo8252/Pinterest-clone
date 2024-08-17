@@ -44,6 +44,7 @@ const UserProfile = ({ user: loggedInUser }) => {
   useEffect(() => {
     fetchUser();
   }, []);
+  
   return (
     <div>
       {user && (
@@ -65,18 +66,14 @@ const UserProfile = ({ user: loggedInUser }) => {
               {user.followers && <p>{user.followers.length} followers</p>}
               {user.following && <p>{user.following.length} followings</p>}
             </p>
-            {user && user._id === loggedInUser._id ? (
-              ""
-            ) : (
-              <div className="flex justify-center mt-4 space-x-2">
-                <button
-                  onClick={followHander}
-                  className="bg-gray-200 px-4 py-2 rounded"
-                >
-                  {isFollow ? "Unfollow" : " Follow"}
-                </button>
-              </div>
-            )}
+            <div className="flex justify-center mt-4 space-x-2">
+              <button
+                onClick={followHander}
+                className="bg-gray-200 px-4 py-2 rounded"
+              >
+                {isFollow ? "Unfollow" : " Follow"}
+              </button>
+            </div>
             <div className="mt-4 flex flex-wrap justify-center gap-4">
               {userPins && userPins.length > 0 ? (
                 userPins.map((e) => <PinCard key={e._id} pin={e} />)
