@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node backend/index.js",
     "dev": "nodemon backend/index.js",
-    "build": "[npm install && cd frontend && npm install && npm run build ] dist --output public",
+    "build": "npm install && cd frontend && npm install && npm run build ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
