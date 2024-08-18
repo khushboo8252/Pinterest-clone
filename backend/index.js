@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import connectDb from "./database/db.js";
 import cookieParser from "cookie-parser";
 import cloudinary from "cloudinary";
-//import path from 'path';
+import path from 'path';
 
 dotenv.config();
 
@@ -29,13 +29,13 @@ import pinRoutes from "./routes/pinRoutes.js";
 app.use("/api/user", userRoutes);
 app.use("/api/pin", pinRoutes);
 
-// const __dirname = path.resolve();
+const __dirname = path.resolve();
 
-// app.use(express.static(path.join(__dirname,"/frontend/dist")));
+app.use(express.static(path.join(__dirname,"/frontend/dist")));
 
-// app.get("*",(req,res) =>{
-//   res.sendFile(path.join(__dirname, "frontend","dist","index.html"));
-// })
+app.get("*",(req,res) =>{
+  res.sendFile(path.join(__dirname, "frontend","dist","index.html"));
+})
 
 
 
